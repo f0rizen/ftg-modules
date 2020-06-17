@@ -27,8 +27,9 @@ class SHRUGMod(loader.Module):
 			return
 		allargs = ""
 		for i in range(0, len(args)):
-			allargs = allargs + args[0] + " "
+			allargs = allargs + str(args[i]) + " "
 		await utils.answer(message, allargs + "¯\_(ツ)_/¯")
+		return
 
 	async def shrugleftcmd(self, message):
 		"""This command returns: *shrug* + *message*"""
@@ -38,12 +39,11 @@ class SHRUGMod(loader.Module):
 			return
 		allargs = ""
 		for i in range(0, len(args)):
-			allargs = allargs + args[0] + " "
+			allargs = allargs + args[i] + " "
+		if allargs[0] == " ":
+			await utils.answer(message, "¯\_(ツ)_/¯" + allargs)
 		else:
-			if str(args[0])[0] == " ":
-				await utils.answer(message, "¯\_(ツ)_/¯" + str(args[0]))
-			else:
-				await utils.answer(message, "¯\_(ツ)_/¯ " + str(args[0]))
+			await utils.answer(message, "¯\_(ツ)_/¯ " + allargs)
 
 	async def shrugmancmd(self, message):
 		"""This command returns: *message* + *man_shrugging emoji*"""
@@ -53,7 +53,7 @@ class SHRUGMod(loader.Module):
 			return
 		allargs = ""
 		for i in range(0, len(args)):
-			allargs = allargs + args[0] + " "
+			allargs = allargs + args[i] + " "
 		await utils.answer(message, allargs + "🤷‍♂️")
 
 	async def shrugwomancmd(self, message):
@@ -64,5 +64,5 @@ class SHRUGMod(loader.Module):
 			return
 		allargs = ""
 		for i in range(0, len(args)):
-			allargs = allargs + args[0] + " "
+			allargs = allargs + args[i] + " "
 		await utils.answer(message, allargs + "🤷‍")
