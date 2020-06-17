@@ -8,7 +8,7 @@ import asyncio
 logger = logging.getLogger(__name__)
 
 @loader.tds
-class SHRUGMod(loader.Module)
+class SHRUGMod(loader.Module):
 	"""Just shrug module"""
 	strings = {"name": "Shrug"}
 
