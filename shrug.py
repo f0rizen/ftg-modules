@@ -24,17 +24,19 @@ class SHRUGMod(loader.Module):
 		args = utils.get_args(message)
 		if not args:
 			await utils.answer(message, "¯\_(ツ)_/¯")
-		else:
-			if str(args[0])[len(str(args[0])) - 1] == " ":
-				await utils.answer(message, str(args[0]) + "¯\_(ツ)_/¯")
-			else:
-				await utils.answer(message, str(args[0]) + " ¯\_(ツ)_/¯")
+		allargs = ""
+		for i in range(0, len(args)):
+			allargs = allargs + args[0] + " "
+		await utils.answer(message, allargs + "¯\_(ツ)_/¯")
 
 	async def shrugleftcmd(self, message):
 		"""This command returns: *shrug* + *message*"""
 		args = utils.get_args(message)
 		if not args:
 			await utils.answer(message, "¯\_(ツ)_/¯")
+		allargs = ""
+		for i in range(0, len(args)):
+			allargs = allargs + args[0] + " "
 		else:
 			if str(args[0])[0] == " ":
 				await utils.answer(message, "¯\_(ツ)_/¯" + str(args[0]))
@@ -46,19 +48,17 @@ class SHRUGMod(loader.Module):
 		args = utils.get_args(message)
 		if not args:
 			await utils.answer(message, "🤷‍♂️")
-		else:
-			if str(args[0])[len(str(args[0])) - 1] == " ":
-				await utils.answer(message, str(args[0]) + "🤷‍♂️")
-			else:
-				await utils.answer(message, str(args[0]) + " 🤷‍♂️")
+		allargs = ""
+		for i in range(0, len(args)):
+			allargs = allargs + args[0] + " "
+		await utils.answer(message, allargs + "🤷‍♂️")
 
 	async def shrugwomancmd(self, message):
 		"""This command returns: *message* + *woman_shrugging emoji*"""
 		args = utils.get_args(message)
 		if not args:
 			await utils.answer(message, "🤷")
-		else:
-			if str(args[0])[len(str(args[0])) - 1] == " ":
-				await utils.answer(message, str(args[0]) + "🤷‍")
-			else:
-				await utils.answer(message, str(args[0]) + " 🤷‍")
+		allargs = ""
+		for i in range(0, len(args)):
+			allargs = allargs + args[0] + " "
+		await utils.answer(message, allargs + "🤷‍")
