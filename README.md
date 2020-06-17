@@ -1,12 +1,12 @@
 # ftg-modules
 ### This is my Friendly-Telegram Modules
 
-(Shrug module)[https://github.com/f0rizen/ftg-modules/blob/master/shrug.py]
+[Shrug module](https://github.com/f0rizen/ftg-modules/blob/master/shrug.py)
 
 
-####Just shrug module
+Just shrug module
 
-##Commands:
+Commands:
  - ```shrug```:
  		Usage:
  		```.shrug``` or ```.shrug``` + args:
