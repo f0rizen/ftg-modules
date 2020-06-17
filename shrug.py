@@ -24,6 +24,7 @@ class SHRUGMod(loader.Module):
 		args = utils.get_args(message)
 		if not args:
 			await utils.answer(message, "¯\_(ツ)_/¯")
+			return
 		allargs = ""
 		for i in range(0, len(args)):
 			allargs = allargs + args[0] + " "
@@ -34,6 +35,7 @@ class SHRUGMod(loader.Module):
 		args = utils.get_args(message)
 		if not args:
 			await utils.answer(message, "¯\_(ツ)_/¯")
+			return
 		allargs = ""
 		for i in range(0, len(args)):
 			allargs = allargs + args[0] + " "
@@ -48,6 +50,7 @@ class SHRUGMod(loader.Module):
 		args = utils.get_args(message)
 		if not args:
 			await utils.answer(message, "🤷‍♂️")
+			return
 		allargs = ""
 		for i in range(0, len(args)):
 			allargs = allargs + args[0] + " "
@@ -58,6 +61,7 @@ class SHRUGMod(loader.Module):
 		args = utils.get_args(message)
 		if not args:
 			await utils.answer(message, "🤷")
+			return
 		allargs = ""
 		for i in range(0, len(args)):
 			allargs = allargs + args[0] + " "
