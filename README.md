@@ -11,49 +11,49 @@ Commands:
 
  		Usage:
 
- 		```.shrug``` or ```.shrug``` + args:
+ 		.shrug or .shrug + args:
  		
  		What is this command doing??
 
- 		```.shrug``` = ```¯\_(ツ)_/¯```
+ 		.shrug = ¯\_(ツ)_/¯
 
- 		```.shrug``` + args = ```¯\_(ツ)_/¯``` *your args*
+ 		.shrug + args = ¯\_(ツ)_/¯ *your args*
 
  - ```shrugleft```
 
  		Usage:
 
- 		```.shrugleft``` or ```shrugleft``` + args:
+ 		.shrugleft or shrugleft + args:
 
  		What if this command doing???
 
- 		```.shrugleft``` = ```¯\_(ツ)_/¯```
+ 		.shrugleft = ¯\_(ツ)_/¯
 
- 		```.shrugleft``` + args = *your args* ```¯\_(ツ)_/¯```
+ 		.shrugleft + args = *your args* ¯\_(ツ)_/¯
 
  - ```shrugman```
 
  		Usage:
 
- 		```.shrugman``` or ```shrugman``` + args:
+ 		.shrugman or shrugman + args:
 
  		What if this command doing???
 
- 		```.shrugman``` = *shrugging man telegram emoji*
+ 		.shrugman = *shrugging man telegram emoji*
 
- 		```.shrugman``` + args = *your args* *shrugging man telegram emoji*
+ 		.shrugman + args = *your args* *shrugging man telegram emoji*
 
  - ```shrugwoman```
 
  		Usage:
 
- 		```.shrugwoman``` or ```shrugwoman``` + args:
+ 		.shrugwoman or shrugwoman + args:
 
  		What if this command doing???
 
- 		```.shrugwoman``` = *shrugging woman telegram emoji*
+ 		.shrugwoman = *shrugging woman telegram emoji*
 
- 		```.shrugwoman``` + args = *your args* *shrugging woman telegram emoji*
+ 		.shrugwoman + args = *your args* *shrugging woman telegram emoji*
 
 
  How to install this module??
