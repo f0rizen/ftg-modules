@@ -2,10 +2,11 @@
 ### This is my Friendly-Telegram Modules
 
 (Shrug module)[https://github.com/f0rizen/ftg-modules/blob/master/shrug.py]
-###About:
-######Just shrug module
 
-######Commands:
+
+####Just shrug module
+
+##Commands:
  - ```shrug```:
  		Usage:
  		```.shrug``` or ```.shrug``` + args:
@@ -41,3 +42,8 @@
  		```.shrugwoman``` = *shrugging woman telegram emoji*
 
  		```.shrugwoman``` + args = *your args* *shrugging woman telegram emoji*
+
+
+ How to install this module??
+
+ ```.dlmod https://raw.githubusercontent.com/f0rizen/ftg-modules/master/shrug.py```
