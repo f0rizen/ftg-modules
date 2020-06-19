@@ -33,7 +33,7 @@ class CALCULATORMod(loader.Module):
 		while i < len(allargs) and allargs[i] >= '0' and allargs[i] <= '9':
 			a = a * 10 + int(allargs[i]);
 			i += 1
-		if allargs[i] != '+' and allargs[i] != '-' and allargs[i] != '/' and allargs[i] != '*':
+		if allargs[i] != '+' and allargs[i] != '-' and allargs[i] != '/' and allargs[i] != '*' and allargs[i] != '^':
 			await utils.answer(message, "I can't count this math expression")
 			return
 		c = allargs[i]
