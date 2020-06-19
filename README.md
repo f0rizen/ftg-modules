@@ -59,3 +59,10 @@ Commands:
  How to install this module??
 
  ```.dlmod https://raw.githubusercontent.com/f0rizen/ftg-modules/master/shrug.py```
+
+
+
+ Just calculator
+
+ Install:
+ ```.dlmod https://raw.githubusercontent.com/f0rizen/ftg-modules/master/calculator.py```
