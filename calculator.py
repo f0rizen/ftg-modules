@@ -41,7 +41,7 @@ class CALCULATORMod(loader.Module):
 		while i < len(allargs) and allargs[i] >= '0' and allargs[i] <= '9':
 			b = b * 10 + int(allargs[i]);
 			i += 1
-		if (b == 0 && c == '/'):
+		if b == 0 and c == '/':
 			await utils.answer(message, "I can't count this math expression")
 			return
 		# КТО ПРОЧИТАЛ ТОТ ЗДОХНЕТ
@@ -62,7 +62,7 @@ class CALCULATORMod(loader.Module):
 			ans = str(a) + "/" + str(b) + "=" + str(a // b)
 			await message.edit(ans)
 			return
-		if c = '^':
+		if c == '^':
 			ans = str(a) + "^" + str(b) + "=" + str(a ** b)
 			await message.edit(ans)
 			return
