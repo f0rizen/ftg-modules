@@ -34,13 +34,16 @@ class CALCULATORMod(loader.Module):
 			a = a * 10 + int(allargs[i]);
 			i += 1
 		if allargs[i] != '+' and allargs[i] != '-' and allargs[i] != '/' and allargs[i] != '*':
-			await utils.answer(message, "ты еблан ты еблан соси хуй еблан")
+			await utils.answer(message, "I can't count this math expression")
 			return
 		c = allargs[i]
 		i += 1;
 		while i < len(allargs) and allargs[i] >= '0' and allargs[i] <= '9':
 			b = b * 10 + int(allargs[i]);
 			i += 1
+		if (b == 0 && c == '/'):
+			await utils.answer(message, "I can't count this math expression")
+			return
 		# КТО ПРОЧИТАЛ ТОТ ЗДОХНЕТ
 		ans = ""
 		if c == '+':
@@ -59,3 +62,8 @@ class CALCULATORMod(loader.Module):
 			ans = str(a) + "/" + str(b) + "=" + str(a // b)
 			await message.edit(ans)
 			return
+		if c = '^':
+			ans = str(a) + "^" + str(b) + "=" + str(a ** b)
+			await message.edit(ans)
+			return
+
