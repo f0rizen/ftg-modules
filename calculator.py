@@ -14,7 +14,7 @@ async def register(cb):
 
 @loader.tds
 class CALCULATORMod(loader.Module):
-	"""Just shrug module"""
+	"""Just calculator module"""
 	strings = {"name": "Calculator"}
 
 	async def calculatecmd(self, message):
