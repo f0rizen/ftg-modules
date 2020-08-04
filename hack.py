@@ -19,10 +19,11 @@ class HACKMod(loader.Module):
 	async def hackcmd(self, message):
 		"""Hack your ass"""
 		i = 0
-		while i <= 100:
+		while i <= 99:
 			await message.edit("Ass hacked for " + str(i) + "%")
 			i += 1
 			time.sleep(0.3)
+		time.sleep(0.3)
 		await message.edit("Ass successfully hacked")
 		return
 
