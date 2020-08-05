@@ -29,6 +29,92 @@ class CALCULATORMod(loader.Module):
 		allargs = ""
 		for i in range(0, len(args)):
 			allargs = allargs + str(args[i])
+
+		# ГИГАНТ МЫСЛИ
+		if allargs == 'True+True':
+			ans = "True+True=2"
+			await message.edit(ans)
+			return
+		if allargs == 'True-True':
+			ans = "True-True=0"
+			await message.edit(ans)
+			return
+		if allargs == 'True*True':
+			ans = "True*True=1"
+			await message.edit(ans)
+			return
+		if allargs == 'True/True':
+			ans = "True/True=1"
+			await message.edit(ans)
+			return
+		if allargs == 'True^True':
+			ans = "True^True=1"
+			await message.edit(ans)
+			return
+
+		if allargs == 'True+False':
+			ans = "True+False=1"
+			await message.edit(ans)
+			return
+		if allargs == 'True-False':
+			ans = "True-False=1"
+			await message.edit(ans)
+			return
+		if allargs == 'True*False':
+			ans = "True*False=0"
+			await message.edit(ans)
+			return
+		if allargs == 'True/False':
+			ans = "I can't count this math expression"
+			await message.edit(ans)
+			return
+		if allargs == 'True^False':
+			ans = "True^False=1"
+			await message.edit(ans)
+			return
+
+		if allargs == 'False+True':
+			ans = "False+True=1"
+			await message.edit(ans)
+			return
+		if allargs == 'False-True':
+			ans = "False-True=-1"
+			await message.edit(ans)
+			return
+		if allargs == 'False*True':
+			ans = "False*True=0"
+			await message.edit(ans)
+			return
+		if allargs == 'False/True':
+			ans = "False/True=0"
+			await message.edit(ans)
+			return
+		if allargs == 'False^True':
+			ans = "False^True=0"
+			await message.edit(ans)
+			return
+
+		if allargs == 'False+False':
+			ans = "False+False=0"
+			await message.edit(ans)
+			return
+		if allargs == 'False-False':
+			ans = "False-False=0"
+			await message.edit(ans)
+			return
+		if allargs == 'False*False':
+			ans = "False*False=0"
+			await message.edit(ans)
+			return
+		if allargs == 'False/False':
+			ans = "I can't count this math expression"
+			await message.edit(ans)
+			return
+		if allargs == 'False^False':
+			ans = "I can't count this math expression"
+			await message.edit(ans)
+			return
+
 		i = 0
 		while i < len(allargs) and allargs[i] >= '0' and allargs[i] <= '9':
 			a = a * 10 + int(allargs[i]);
@@ -64,3 +150,5 @@ class CALCULATORMod(loader.Module):
 			return
 		if c == '^':
 			ans = str(a) + "^" + str(b) + "=" + str(a ** b)
+			await message.edit(ans)
+			return
