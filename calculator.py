@@ -24,7 +24,7 @@ class CALCULATORMod(loader.Module):
 			await utils.answer(message, "<strong>You didn't specifyed args</strong>")
 			return
 		allargs = ""
-		if len(args[0])<=3:
+		if len(args[0])<=2:
 			await message.edit("<strong>I can't count this math expression</strong>")
 			return
 		
