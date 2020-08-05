@@ -27,7 +27,10 @@ class CALCULATORMod(loader.Module):
 		#Кто прочитал тот сдохнет ¯\_(ツ)_/¯
 		for i in range(0, len(args)):
 			allargs = allargs + str(args[i])
-		result=eval(allargs)
+		try:
+			result=eval(allargs)
+		except NameError:
+			await message.edit("<strong>I can't count this math expression</strong>")
 		try:
 			await message.edit(f'{allargs}={int(result)}')
 		except ValueError:
