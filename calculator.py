@@ -64,6 +64,3 @@ class CALCULATORMod(loader.Module):
 			return
 		if c == '^':
 			ans = str(a) + "^" + str(b) + "=" + str(a ** b)
-			await message.edit(ans)
-			return
-
