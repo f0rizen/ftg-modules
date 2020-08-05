@@ -24,18 +24,18 @@ class CALCULATORMod(loader.Module):
 			await utils.answer(message, "<strong>You didn't specifyed args</strong>")
 			return
 		if len(args[1])<=3:
-			await message.edit("<strong>I can't count this math expression</strong>")
+			await message.edit("<strong>I can't count this math expression(1)</strong>")
 			return
 		
 		#Кто прочитал тот сдохнет ¯\_(ツ)_/¯		
 		try:
 			result=eval(args[1])
 		except NameError:
-			await message.edit("<strong>I can't count this math expression</strong>")
+			await message.edit("<strong>I can't count this math expression(2)</strong>")
 			return
 		
 		try:
-			await message.edit(f'<strong>{allargs}={int(result)}</strong>')
+			await message.edit(f'<strong>{args[1]}={int(result)}</strong>')
 		except ValueError:
-			await message.edit("<strong>I can't count this math expression</strong>")
+			await message.edit("<strong>I can't count this math expression(3)</strong>")
 			return
