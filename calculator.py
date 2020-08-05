@@ -19,9 +19,25 @@ class CALCULATORMod(loader.Module):
 
 	async def calculatecmd(self, message):
 		"""This command can count a equality"""
-		args = utils.get_args(message)
-		if not args:
-			await utils.answer(message, "You didn't specifyed args")
+		args = message.text.split(' ')
+		if len(args)!=2:
+			await utils.answer(message, "<strong>You didn't specifyed args</strong>")
+			return
+		if len(args[1])<=2:
+			await message.edit("<strong>I can't count this math expression(1)</strong>")
+			return
+		
+		#Кто прочитал тот сдохнет ¯\_(ツ)_/¯		
+		try:
+			result=eval(args[1])
+		except:
+			await message.edit("<strong>I can't count this math expression(2)</strong>")
+			return
+		
+		try:
+			await message.edit(f'<strong>{args[1]}={int(result)}</strong>')
+		except ValueError:
+			await message.edit("<strong>I can't count this math expression(3)</strong>")
 			return
 		a = 0
 		b = 0

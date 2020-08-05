@@ -20,10 +20,10 @@ class HACKMod(loader.Module):
 		"""Hack your ass"""
 		i = 0
 		while i <= 99:
-			await message.edit("Ass hacked for " + str(i) + "%")
+			await message.edit("<strong>Ass hacked for " + str(i) + "%</strong>")
 			i += 1
 			time.sleep(0.3)
 		time.sleep(0.3)
-		await message.edit("Ass successfully hacked")
+		await message.edit("<strong>Ass successfully hacked</strong>")
 		return
 
