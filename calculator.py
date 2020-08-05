@@ -19,17 +19,17 @@ class CALCULATORMod(loader.Module):
 
 	async def calculatecmd(self, message):
 		"""This command can count a equality"""
-		args = utils.get_args(message)
-		if not args:
+		args = message.text.split(' ')
+		if len(args)!=2:
 			await utils.answer(message, "<strong>You didn't specifyed args</strong>")
 			return
 		allargs = ""
-		if len(args[0])<=2:
+		if len(args[1])<=3:
 			await message.edit("<strong>I can't count this math expression</strong>")
 			return
 		
 		#Кто прочитал тот сдохнет ¯\_(ツ)_/¯
-		for i in range(0, len(args)):
+		for i in range(0, len(args[1])):
 			allargs = allargs + str(args[i])
 			
 		try:
