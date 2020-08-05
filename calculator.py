@@ -39,7 +39,7 @@ class CALCULATORMod(loader.Module):
 			return
 		
 		try:
-			await message.edit(f'{allargs}={int(result)}')
+			await message.edit(f'<strong>{allargs}={int(result)}</strong>')
 		except ValueError:
 			await message.edit("<strong>I can't count this math expression</strong>")
 			return
