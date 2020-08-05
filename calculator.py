@@ -1,5 +1,5 @@
 # Just calculator
-# by @f0rizen
+# by @f0rizen, @AtiksX
 
 from .. import loader, utils
 
