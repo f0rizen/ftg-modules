@@ -21,7 +21,7 @@ class CALCULATORMod(loader.Module):
 		"""This command can count a equality"""
 		args = message.text.split(' ')
 		if len(args)!=2:
-			await utils.answer(message, "<strong>You didn't specifyed args(test)</strong>")
+			await utils.answer(message, "<strong>You didn't specifyed args</strong>")
 			return
 		if len(args[1])<=2:
 			await message.edit("<strong>I can't count this math expression(1)</strong>")
