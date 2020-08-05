@@ -21,49 +21,14 @@ class CALCULATORMod(loader.Module):
 		"""This command can count a equality"""
 		args = utils.get_args(message)
 		if not args:
-			await utils.answer(message, "You didn't specifyed args")
+			await utils.answer(message, "<strong>You didn't specifyed args</strong>")
 			return
-		a = 0
-		b = 0
-		c = ''
 		allargs = ""
+		#Кто прочитал тот сдохнет ¯\_(ツ)_/¯
 		for i in range(0, len(args)):
 			allargs = allargs + str(args[i])
-		i = 0
-		while i < len(allargs) and allargs[i] >= '0' and allargs[i] <= '9':
-			a = a * 10 + int(allargs[i]);
-			i += 1
-		if allargs[i] != '+' and allargs[i] != '-' and allargs[i] != '/' and allargs[i] != '*' and allargs[i] != '^':
-			await utils.answer(message, "I can't count this math expression")
-			return
-		c = allargs[i]
-		i += 1;
-		while i < len(allargs) and allargs[i] >= '0' and allargs[i] <= '9':
-			b = b * 10 + int(allargs[i]);
-			i += 1
-		if b == 0 and c == '/':
-			await utils.answer(message, "I can't count this math expression")
-			return
-		# КТО ПРОЧИТАЛ ТОТ ЗДОХНЕТ
-		ans = ""
-		if c == '+':
-			ans = str(a) + "+" + str(b) + "=" + str(a + b)
-			await message.edit(ans)
-			return
-		if c == '-':
-			ans = str(a) + "-" + str(b) + "=" + str(a - b)
-			await message.edit(ans)
-			return
-		if c == '*':
-			ans = str(a) + "*" + str(b) + "=" + str(a * b)
-			await message.edit(ans)
-			return
-		if c == '/':
-			ans = str(a) + "/" + str(b) + "=" + str(a // b)
-			await message.edit(ans)
-			return
-		if c == '^':
-			ans = str(a) + "^" + str(b) + "=" + str(a ** b)
-			await message.edit(ans)
-			return
-
+		result=eval(allargs)
+		try:
+			await message.edit(f'{allargs}={int(result)}')
+		except ValueError:
+			await message.edit("<strong>I can't count this math expression</strong>")
