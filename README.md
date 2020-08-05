@@ -13,3 +13,9 @@
  Install:
 
  ```.dlmod https://raw.githubusercontent.com/f0rizen/ftg-modules/master/calculator.py```
+ 
+ [Ass hack](https://github.com/f0rizen/ftg-modules/blob/master/hack.py)
+ 
+ Install:
+ 
+ ```.dlmod https://raw.githubusercontent.com/f0rizen/ftg-modules/master/hack.py```
