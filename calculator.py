@@ -26,18 +26,12 @@ class CALCULATORMod(loader.Module):
 		if len(args[1])<=2:
 			await message.edit("<strong>I can't count this math expression(1)</strong>")
 			return
-		
-		#Кто прочитал тот сдохнет ¯\_(ツ)_/¯		
-		try:
-			result=eval(args[1])
-		except:
-			await message.edit("<strong>I can't count this math expression(2)</strong>")
-			return
-		
-		try:
-			await message.edit(f'<strong>{args[1]}={int(result)}</strong>')
-		except ValueError:
+		if not args[1].isdigit():
 			await message.edit("<strong>I can't count this math expression(3)</strong>")
 			return
+		#Кто прочитал тот сдохнет ¯\_(ツ)_/¯		
+		result=eval(args[1])
+		await message.edit(f'<strong>{args[1]}={int(result)}</strong>')
+
 
 
