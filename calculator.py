@@ -1,5 +1,5 @@
 # Just calculator
-# by @f0rizen
+# by @f0rizen, @AtiksX
 
 from .. import loader, utils
 
@@ -26,12 +26,22 @@ class CALCULATORMod(loader.Module):
 		if len(args[1])<=2:
 			await message.edit("<strong>I can't count this math expression(1)</strong>")
 			return
-		if not args[1].isdigit():
+		
+		#Кто прочитал тот сдохнет ¯\_(ツ)_/¯		
+		try:
+			result=eval(args[1])
+		except:
+			await message.edit("<strong>I can't count this math expression(2)</strong>")
+			return
+		
+		if type(result)==int:
+			await message.edit(f'<strong>{args[1]}={int(result)}</strong>')
+			return
+		if type(result)==float:
+			await message.edit(f'<strong>{args[1]}={float(result)}</strong>')
+			return
+		else:
 			await message.edit("<strong>I can't count this math expression(3)</strong>")
 			return
-		#Кто прочитал тот сдохнет ¯\_(ツ)_/¯		
-		result=eval(args[1])
-		await message.edit(f'<strong>{args[1]}={int(result)}</strong>')
-
-
+		
 
