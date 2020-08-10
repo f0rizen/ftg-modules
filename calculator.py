@@ -34,10 +34,14 @@ class CALCULATORMod(loader.Module):
 			await message.edit("<strong>I can't count this math expression(2)</strong>")
 			return
 		
-		try:
+		if type(result)==int:
 			await message.edit(f'<strong>{args[1]}={int(result)}</strong>')
-		except ValueError:
+			return
+		if type(result)==float:
+			await message.edit(f'<strong>{args[1]}={float(result)}</strong>')
+			return
+		else:
 			await message.edit("<strong>I can't count this math expression(3)</strong>")
 			return
-
+		
 

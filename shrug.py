@@ -23,27 +23,27 @@ class SHRUGMod(loader.Module):
 		"""This command returns: *message* + *shrug*"""
 		args = utils.get_args(message)
 		if not args:
-			await utils.answer(message, "¯\_(ツ)_/¯")
+			await utils.answer(message, "<strong>¯\_(ツ)_/¯</strong>")
 			return
 		allargs = ""
 		for i in range(0, len(args)):
 			allargs = allargs + str(args[i]) + " "
-		await utils.answer(message, allargs + "¯\_(ツ)_/¯")
+		await utils.answer(message, allargs + "<strong>¯\_(ツ)_/¯</strong>")
 		return
 
 	async def shrugleftcmd(self, message):
 		"""This command returns: *shrug* + *message*"""
 		args = utils.get_args(message)
 		if not args:
-			await utils.answer(message, "¯\_(ツ)_/¯")
+			await utils.answer(message, "<strong>¯\_(ツ)_/¯</strong>")
 			return
 		allargs = ""
 		for i in range(0, len(args)):
 			allargs = allargs + args[i] + " "
 		if allargs[0] == " ":
-			await utils.answer(message, "¯\_(ツ)_/¯" + allargs)
+			await utils.answer(message, "<strong>¯\_(ツ)_/¯</strong>" + allargs)
 		else:
-			await utils.answer(message, "¯\_(ツ)_/¯ " + allargs)
+			await utils.answer(message, "<strong>¯\_(ツ)_/¯</strong>" + allargs)
 
 	async def shrugmancmd(self, message):
 		"""This command returns: *message* + *man_shrugging emoji*"""
